@@ -1,0 +1,39 @@
+.page-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.characters-list {
+    list-style: none;
+    width: 380px;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.characterList-img {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+}
+
+.characterList-item {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.characterList-item:hover {
+    transform: scale(1.05);
+}
+
+.characterList-item span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.7);
+    width: 100%;
+}
+
+.characterDetails-container {
+    width: 100%;
+}

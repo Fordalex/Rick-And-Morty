@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Rick And Morty - Characters</title>
+</head>
+<body>
+    
+    <div id="app">
+        <navigation></navigation>
+        <div class="page-container">
+            <div class="characterList-container">
+                <character-list :characters="characters" @get-character="getCharacter"></character-list>
+                <button @click="getCharacters">Load More</button>
+            </div>
+            <div class="characterDetails-container">
+                <character :character="character"></character>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Import the app -->
+    <script src="assets/javascript/app.js"></script>
+
+    <!-- Import components -->
+    <script src="assets/components/Character.js"></script>
+    <script src="assets/components/CharacterList.js"></script>
+    <script src="assets/components/Navigation.js"></script>
+
+    <script>
+        const mountedApp = app.mount("#app");
+        mountedApp.getCharacters();
+        mountedApp.getCharacter(1);
+    </script>
+</body>
+</html>
