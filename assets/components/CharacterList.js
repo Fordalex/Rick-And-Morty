@@ -9,7 +9,6 @@ app.component('character-list', {
     /*html*/
     `
         <div class="character-container">
-            <h3>Characters</h3>
             <ul class="characters-list">
                 <li v-for="(character, index) in characters" :key="index" class="characterList-item" @click="getCharacter(character.id)">
                     <img :src="character.image" class="characterList-img">
@@ -17,7 +16,7 @@ app.component('character-list', {
                 </li>
             </ul>
             <div>Characters loaded: {{ characters.length }}</div>
-            <div>Total characters: 800</div>
+            <div>Total characters: 826</div>
         </div>
     `,
     methods: {

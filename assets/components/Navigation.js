@@ -4,9 +4,10 @@ app.component('navigation', {
     /*html*/`
     <nav>
         <ul>
-            <li>Characters</li>
-            <li>Episodes</li>
-            <li>Locations</li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./characters.html">Characters</a></li>
+            <li><a href="./episodes.html">Episodes</a></li>
+            <li><a href="./locations.html">Locations</a></li>
         </ul>
     </nav>
     `,

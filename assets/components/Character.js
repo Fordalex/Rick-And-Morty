@@ -9,22 +9,21 @@ app.component('character', {
     /*html*/`<div class="character-wrapper">
         <img :src="character.image"/>
         <h3>{{ character.name }}</h3>
-        <p v-if="character.status">status: {{ character.status }}</p>
-        <p v-if="character.species">species: {{ character.species }}</p>
-        <p v-if="character.type">type: {{ character.type }}</p>
-        <p v-if="character.gendar">gender: {{ character.gender }}</p>
+        <p v-if="character.status"><b>Status:</b> {{ character.status }}</p>
+        <p v-if="character.species"><b>Species:</b> {{ character.species }}</p>
+        <p v-if="character.type"><b>Type:</b> {{ character.type }}</p>
+        <p v-if="character.gendar"><b>Gender:</b> {{ character.gender }}</p>
         <h3>Locations</h3>
-        <div>
-            <p>Origin: {{ character.origin?.name }}</p>
+        <div class="character-infoSection">
+            <p><b>Origin:</b> {{ character.origin?.name }}</p>
             <button>View Location</button>
         </div>
         <h3>Episodes</h3>
-        <ul>
-            <li v-for="(e, i) in character.episode" :key="i">{{ e }}</li>
-        </ul>
+        <div class="character-infoSection">
+            <p><b>Total:</b> {{ character.episode?.length }}</p>
+            <button>View Episode<span v-if="character.episode?.length > 1">s</span></button>
+        </div>
     </div>
-    `,
-    data() {},
-    methods: {}
+    `
 })
 
