@@ -11,8 +11,11 @@ const app = Vue.createApp({
       character: {},
       locations: [],
       location: {},
+      episodes: [],
+      episode: {},
       characterNextPage: "https://rickandmortyapi.com/api/character/",
       locationNextPage: "https://rickandmortyapi.com/api/location",
+      episodeNextPage: "https://rickandmortyapi.com/api/episode",
     }
   },
   methods: {
@@ -35,6 +38,16 @@ const app = Vue.createApp({
     async getLocation(id) {
       let data = await getApiData(`https://rickandmortyapi.com/api/location/${id}`);
       this.location = data;
+    },
+    async getEpisodes() {
+      let data = await getApiData(this.episodeNextPage);
+      let episodes = this.episodes.concat(data["results"]);
+      this.episodes = episodes;
+      this.episodeNextPage = data["info"]["next"];
+    },
+    async getEpisode(id) {
+      let data = await getApiData(`https://rickandmortyapi.com/api/episode/${id}`);
+      this.episode = data;
     }
   }
 })
