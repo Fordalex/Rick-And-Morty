@@ -15,6 +15,15 @@
     <div id="app">
         <navigation></navigation>
         <heading title="Locations"></heading>
+        <div class="page-container">
+            <div class="characterList-container">
+                <location-list :locations="locations" @get-location="getLocation"></location-list>
+                <button @click="getLocations">Load More</button>
+            </div>
+            <div class="characterDetails-container">
+                <location :location="location"></locaiton>
+            </div>
+        </div>
         <page-footer></page-footer>
     </div>
     
@@ -22,16 +31,16 @@
     <script src="assets/javascript/app.js"></script>
 
     <!-- Import components -->
-    <script src="assets/components/Character.js"></script>
-    <script src="assets/components/CharacterList.js"></script>
+    <script src="assets/components/Location.js"></script>
+    <script src="assets/components/LocationList.js"></script>
     <script src="assets/components/PageFooter.js"></script>
     <script src="assets/components/Heading.js"></script>
     <script src="assets/components/Navigation.js"></script>
 
     <script>
         const mountedApp = app.mount("#app");
-        mountedApp.getCharacters();
-        mountedApp.getCharacter(1);
+        mountedApp.getLocations();
+        mountedApp.getLocation(1);
     </script>
 </body>
 </html>

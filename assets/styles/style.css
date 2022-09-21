@@ -53,6 +53,7 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    padding: 1rem;
 }
 
 .characterList-container {
