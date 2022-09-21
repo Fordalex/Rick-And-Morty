@@ -12,6 +12,8 @@ app.component('episode', {
         <p><b>Air Date:</b> {{ episode.air_date }}</p>
         <p><b>Episode:</b> {{ episode.episode }}</p>
         <p><b>Characters total:</b> {{ episode.characters?.length }}</p>
+        <button>View Characters</button>
+        <p>Show all characters here after button press</p>
     </div>
     `
 })

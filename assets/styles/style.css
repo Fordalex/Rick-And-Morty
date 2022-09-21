@@ -27,7 +27,7 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 1rem;
-    background-color: var(--green);
+    background-color: #f6f6f6;
     text-align: center;
 }
 
@@ -44,9 +44,19 @@ nav ul li a {
     font-size: 1.5rem;
 }
 
+nav ul li img {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1rem;
+}
+
+.logo {
+    filter: brightness(0.96);
+}
+
 .heading {
     padding: 2rem;
-    background: rgb(245,245,245);
+    background: var(--green);
 }
 
 .page-container {
