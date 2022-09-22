@@ -8,10 +8,11 @@ app.component('character-list', {
     template:
     /*html*/
     `
-        <div class="character-container">
-            <ul class="characters-list">
+        <div class="items-container">
+            <ul class="items-list">
                 <li v-for="(character, index) in characters" :key="index" class="characterList-item" @click="getCharacter(character.id)">
                     <img :src="character.image" class="characterList-img">
+                    <span class="character-id"><b>{{ index + 1 }}</b></span>
                     <span class="character-name"><b>{{ character.name }}</b></span>
                 </li>
             </ul>

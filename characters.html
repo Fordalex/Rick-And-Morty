@@ -41,7 +41,7 @@
         mountedApp.getCharacters();
         mountedApp.getCharacter(1);
 
-        const charactersList = document.querySelector('.characters-list');
+        const charactersList = document.querySelector('.items-list');
         charactersList.addEventListener('scroll', (e) => {
             const distance = charactersList.scrollTop / (charactersList.scrollHeight - charactersList.clientHeight);
             if (distance === 1 || distance === NaN) {

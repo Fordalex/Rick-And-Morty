@@ -7,7 +7,7 @@ app.component('character', {
       },
     template: 
     /*html*/`<div class="character-wrapper">
-        <img :src="character.image"/>
+        <img :src="character.image" class="character-image"/>
         <h2>{{ character.name }}</h2>
         <p v-if="character.status"><b>Status:</b> {{ character.status }}</p>
         <p v-if="character.species"><b>Species:</b> {{ character.species }}</p>
