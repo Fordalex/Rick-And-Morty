@@ -82,22 +82,28 @@ nav ul li img {
 }
 
 .characters-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     list-style: none;
-    width: 380px;
-    height: 80vh;
+    width: 350px;
+    height: 690px;
     overflow-y: auto;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .characterList-img {
-    width: 100px;
-    height: 100px;
-    margin-right: 1rem;
+    width: 100%;
+    height: 100%;
 }
 
 .characterList-item {
     cursor: pointer;
     position: relative;
     display: inline-block;
+    width: 100px;
+    height: 100px;
 }
 
 .characterList-item:hover {
@@ -108,8 +114,16 @@ nav ul li img {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgba(255,255,255,0.7);
+    padding: 0 0.25rem;
+    background-color: rgba(255,255,255,0.85);
     width: 100%;
+}
+
+.character-name {
+    font-size: 0.9rem;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 .characterDetails-container {

@@ -18,7 +18,6 @@
         <div class="page-container">
             <div class="characterList-container">
                 <character-list :characters="characters" @get-character="getCharacter"></character-list>
-                <button @click="getCharacters">Load More</button>
             </div>
             <div class="characterDetails-container">
                 <character :character="character"></character>
@@ -41,6 +40,14 @@
         const mountedApp = app.mount("#app");
         mountedApp.getCharacters();
         mountedApp.getCharacter(1);
+
+        const charactersList = document.querySelector('.characters-list');
+        charactersList.addEventListener('scroll', (e) => {
+            const distance = charactersList.scrollTop / (charactersList.scrollHeight - charactersList.clientHeight);
+            if (distance === 1 || distance === NaN) {
+                mountedApp.getCharacters();
+            }
+        });
     </script>
 </body>
 </html>

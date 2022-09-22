@@ -12,7 +12,7 @@ app.component('character-list', {
             <ul class="characters-list">
                 <li v-for="(character, index) in characters" :key="index" class="characterList-item" @click="getCharacter(character.id)">
                     <img :src="character.image" class="characterList-img">
-                    <span>{{ character.name }}</span>
+                    <span class="character-name"><b>{{ character.name }}</b></span>
                 </li>
             </ul>
             <div>Characters loaded: {{ characters.length }}</div>
