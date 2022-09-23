@@ -11,8 +11,8 @@ app.component('episode-list', {
         <div class="items-container">
             <ul class="items-list">
                 <li v-for="(episode, index) in episodes" :key="index" @click="getEpisode(episode.id)">
-                    <a href="#">{{ episode.name }}</a>
-                    {{ episode.episode }}
+                    <span>{{ episode.name }}</span>
+                    <span class="episode-text"><b>{{ episode.episode }}</b></span>
                 </li>
             </ul>
             <div>Episodes loaded: {{ episodes.length }}</div>
