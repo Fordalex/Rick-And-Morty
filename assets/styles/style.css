@@ -45,8 +45,12 @@ body {
 
 .home-container div {
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
     height: fit-content;
+}
+
+.home-container > div:first-child {
+    width: 70%;
 }
 
 .home-image {
