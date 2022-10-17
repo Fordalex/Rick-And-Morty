@@ -16,11 +16,11 @@
         <navigation></navigation>
         <heading title="Locations"></heading>
         <div class="page-container">
-            <div class="list-container">
+            <div class="list-container  white-container">
                 <location-list :locations="locations" @get-location="getLocation"></location-list>
                 <button @click="getLocations">Load More</button>
             </div>
-            <div class="details-container">
+            <div class="details-container  white-container">
                 <location :location="location"></locaiton>
             </div>
         </div>

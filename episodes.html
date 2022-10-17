@@ -16,11 +16,11 @@
         <navigation></navigation>
         <heading title="Episodes"></heading>
         <div class="page-container">
-            <div class="list-container">
+            <div class="list-container white-container">
                 <episode-list :episodes="episodes" @get-episode="getEpisode"></episode-list>
                 <button @click="getEpisodes">Load More</button>
             </div>
-            <div class="details-container">
+            <div class="details-container white-container">
                 <episode :episode="episode"></locaiton>
             </div>
         </div>
